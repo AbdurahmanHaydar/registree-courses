@@ -3,21 +3,35 @@ var request = require('request');
 var path = require('path');
 const app = express()
 const port = 3001
-
-// app.get('/api', (req, res) => res.send('Hello World!'))
-
+ 
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/api', function(req, res){
 
-    request('https://registree-coding-challenge.glitch.me/stanford', function (error, response, body) {
-          console.log('error:', error); // Print the error if one occurred and handle it
-          console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    var arr = []
 
-          console.log( response );
-          res.send(body)
 
+    request('https://registree-coding-challenge.glitch.me/stanford', function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            var data1 = JSON.parse(body);
+
+            request('https://registree-coding-challenge.glitch.me/cornell', function(error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    var data2 = JSON.parse(body);
+                    console.log('data1', data1, 'data2', data2);
+
+                    var arr = data1.concat(data2)
+
+                    console.log(arr);
+
+                    res.send(arr)
+
+                }
+            });
+        }
     });
+
+
 
 })
 
