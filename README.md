@@ -18,7 +18,7 @@ npm run start
 
 ## User Experience choices
 
-1 - Initially when the page is loaded, the user/ recruiter is shown all the degrees in alphabetical order.
+1 - Initially when the page is loaded, the user/ recruiter is shown all the degrees in alphabetical order in cards.
 
 
 2 -  The recruiter then has the option to filter by either degree name, degree level or degree duration.
