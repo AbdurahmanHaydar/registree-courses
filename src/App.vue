@@ -220,7 +220,7 @@ export default {
 
   async beforeMount() {
 
-    let endpoint1 = await fetch('http://localhost:3000/api')
+    let endpoint1 = await fetch('http://localhost:3001/api')
 
     if (endpoint1.ok ) {
       var arr1 =  await endpoint1.json()
@@ -231,9 +231,9 @@ export default {
 
       this.modal = !this.modal
       this.error =  "Endpoint 2`s HTTP-Error: " + endpoint1.status
+    }
 
-
-     let allDegrees = arr1.concat(arr2)
+     let allDegrees = arr1
 
      var myData =allDegrees;
 
