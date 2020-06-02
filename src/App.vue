@@ -540,7 +540,8 @@ input[type='range']::-webkit-slider-thumb {
   -webkit-box-align: center;
           align-items: center;
   white-space: nowrap;
-  margin: 0 1rem;
+  margin: 20 1rem;
+  border-top: 2px solid #c5d0d1;
   padding: 2rem 0.5rem 1rem;
   border-bottom: 1px solid #c5d0d1;
 }
@@ -555,10 +556,14 @@ input[type='range']::-webkit-slider-thumb {
 }
 .nav__label {
   position: relative;
+  background-color: #e4e4e6;
+  font-weight: bold;
+  border-radius: 12px;
   margin-left: 1rem;
   text-transform: capitalize;
   z-index: 1;
   cursor: pointer;
+  padding:10px;
 }
 .nav__label::after {
   content: '\00d7';

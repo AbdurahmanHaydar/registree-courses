@@ -11,7 +11,7 @@
           <blockquote class="degree_item">{{  degree.duration  }}</blockquote>
         </div>
 
-        <ul class="degree_details">
+        <!-- <ul class="degree_details">
           <li class="degree_data">
             <label class="degree__label">Degree</label>
             <p class="degree_class"
@@ -24,7 +24,7 @@
             <label class="degree__label">Duration</label>
             <p class="degree__duration">{{   Number( degree.duration.match(/\d+/)[0] )   }}</p>
           </li>
-        </ul>
+        </ul> -->
       </li>
     </transition-group>
 
@@ -66,7 +66,7 @@ export default {
   height: 2.5rem;
   margin: 0.75rem 0;
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: bold;
   text-align: center;
 }
 .degree_item {
@@ -124,7 +124,7 @@ export default {
   margin-top: 1rem;
   padding-top: 0.75rem;
   border-radius: 6px;
-  background-color: white;
+  background-color: #efecec;
   box-shadow: 0 0 0 1px #c5d0d1;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
